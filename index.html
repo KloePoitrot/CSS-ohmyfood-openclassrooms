@@ -5,24 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="assets/css/style.css">
+    
     <title>Ohmyfood</title>
 </head>
 <body>
     <header>
-        <div>
+        <div class="logo">
             <img src="assets/img/logo/ohmyfood.png" alt="Logo du site ohmyfood">
         </div>
-        <form action="#">
+        <div class="localisation" action="#">
             <i class="fas fa-location-dot"></i>
-            <input type="text" value="Paris, Belleville">
-        </form>
+            <input class="localisation_input" type="text" placeholder="Choisissez une ville" value="Paris, Belleville">
+        </div>
     </header>
-    <article>
+    <article class="section section__grey">
         <h1>Réservez le menu qui vous convient</h1>
         <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
         <a href="#">Explorer nos restaurants</a>
     </article>
-    <section>
+    <section class="section section__grey">
         <h2>Fonctionnement</h2>
         <article>
             <div>
@@ -40,7 +41,7 @@
         </article>
         <article>
             <div>
-                <h3>Choisissez un restaurant</h3>
+                <h3>Dégustez au restorant</h3>
                 <p><i class="fas fa-store"></i></p>
             </div>
             <p>3</p>

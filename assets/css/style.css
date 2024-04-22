@@ -1,3 +1,63 @@
+/* 
+====================
+    STYLING 
+====================
+*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap");
+body {
+  margin: 0;
+  font-family: roboto, sans-serif;
+}
 
+img {
+  max-width: 100%;
+}
+
+input {
+  background: none;
+  border: none;
+}
+
+input:focus-visible {
+  outline: none;
+}
+
+/* 
+====================
+    HEADER  
+====================
+*/
+header > * {
+  display: flex;
+  justify-content: center;
+  width: auto;
+  padding: 30px 20px;
+}
+
+.logo {
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+}
+.logo img {
+  max-width: 250px;
+}
+
+.localisation {
+  display: flex;
+  justify-content: center;
+  width: auto;
+  padding: 20px;
+  font-size: 15px;
+  background: #eaeaea;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+}
+.localisation i {
+  margin-right: 1rem;
+}
+.localisation .localisation_input {
+  font-weight: 600;
+  font-size: 20px;
+  display: flex;
+  width: auto;
+}
 
 /*# sourceMappingURL=style.css.map */
