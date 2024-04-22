@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* 
 ====================
     STYLING 
@@ -7,6 +8,7 @@
 body {
   margin: 0;
   font-family: roboto, sans-serif;
+  font-weight: 300;
 }
 
 img {
@@ -29,35 +31,62 @@ input:focus-visible {
 */
 header > * {
   display: flex;
+  position: relative;
   justify-content: center;
   width: auto;
-  padding: 30px 20px;
+  background: #eaeaea;
 }
 
 .logo {
-  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+  z-index: 20;
+  padding: 30px 20px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+  background: #fff;
 }
 .logo img {
   max-width: 250px;
 }
 
 .localisation {
-  display: flex;
-  justify-content: center;
-  width: auto;
   padding: 20px;
   font-size: 15px;
-  background: #eaeaea;
-  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 3px 5px 3px rgba(0, 0, 0, 0.3);
 }
 .localisation i {
   margin-right: 1rem;
 }
-.localisation .localisation_input {
+.localisation .localisation-input {
   font-weight: 600;
   font-size: 20px;
   display: flex;
-  width: auto;
+}
+
+/* 
+====================
+Content  
+====================
+*/
+.title1 {
+  font-size: 25px;
+  font-weight: 900;
+}
+
+.title2 {
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.section {
+  padding: 2rem;
+}
+.section_center {
+  text-align: center;
+}
+.section_grey {
+  background: #f6f6f6;
+}
+.section_white {
+  background: #fff;
 }
 
 /*# sourceMappingURL=style.css.map */
