@@ -1,31 +1,43 @@
 /* 
-====================
-    STYLING 
-====================
+========================================
+ ---------------------- STYLING 
+========================================
 */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap');
 
+/* ---------------------- colors */
 $whitebg: #fff;
 $greybg: #f6f6f6;
 $primaryC: #9356DC;
 $secondaryC: #FF79DA;
 $tertiaryC: #99E2D0;
 
-@mixin btngradient {
-    background: $primaryC;
-    background: linear-gradient(286deg, $primaryC 0%, $secondaryC 100%);
-}
+/* ---------------------- misc */
+$borderRadius: 1rem;
+
+/* ---------------------- mixins */
 @mixin boxshadow {
-    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
+@mixin boxshadowhover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+/* ---------------------- Initialisation */
 body{
     margin:0;
     font-family: roboto, sans-serif;
     font-weight: 300;
 }
-
+h1, h2, h3{
+    margin:0;
+}
 img{
     max-width:100%
+}
+a{
+    text-decoration: none;
 }
 input {
     background:none;
@@ -37,49 +49,53 @@ input:focus-visible {
 
 
 
+
+
 /* 
-====================
-    HEADER  
-====================
+========================================
+ ---------------------- HEADER  
+========================================
 */
-header > *{
-    display:flex;
+.logo{
     position: relative;
+    display:flex;
     justify-content:center;
     width:auto;
-    background:#eaeaea;
-
-}
-.logo{
     z-index:20;
-    padding:30px 20px;
+    padding:20px;
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
     background:$whitebg;
     img {
-        max-width:250px
+        max-width:200px;
     }
 }
-.localisation{
-    padding:20px;
-    font-size:15px;
-    box-shadow: 0 3px 5px 3px rgba(0, 0, 0, 0.3);
-    i{
-        margin-right:1rem;
-    }
-    .localisation-input{
-        font-weight: 600;
-        font-size:20px;
-        display:flex;
-    }
-}
+
+
 
 
 
 /* 
-====================
-Content  
-====================
+========================================
+---------------------- Content  
+========================================
 */
+.localisation{
+    position:relative;
+    padding:20px;
+    font-size:15px;
+    box-shadow: 0 3px 5px 3px rgba(0, 0, 0, 0.3);
+    background:#eaeaea;
+    i{
+        font-size:20px;
+    }
+    .localisation_input{
+        font-weight: 600;
+        font-size:20px;
+        width: 200px;
+        text-align: center;
+    }
+}
+
 .title1{
     font-size:25px;
     font-weight:900;
@@ -90,16 +106,174 @@ Content  
 }
 
 .section{
-    padding:2rem;
-
+    padding:3rem 1rem;
+    .section_content{
+        margin:1.5rem 0
+    }
     &_center{
         text-align: center;
     }
 
+    /* ---------------------- Menusection */
+    // &_menu{
+
+    // }
+
+    /* ---------------------- Background Color */
     &_grey{
         background:$greybg;
+        .card{
+            background:$whitebg;
+        }
     }
     &_white{
         background:$whitebg;
+        .card{
+            background:$greybg;
+        }
+    }
+
+}
+
+
+
+
+
+/* 
+========================================
+---------------------- Button  
+========================================
+*/
+.btn{
+    display:inline-block;
+    padding: 1rem 1.5rem;
+    margin:1rem 0!important;
+    border-radius:10rem;
+    @include boxshadow();
+    &_gradient{
+        background: $primaryC;
+        background: linear-gradient(0deg, $primaryC 0%, $secondaryC 120%);
+        color:#fff;
     }
 }
+
+.fa-heart{
+    font-size:1.5rem;
+    margin:0 1rem;
+    &:active {
+        background: -webkit-linear-gradient($primaryC, $secondaryC 120%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+
+
+
+
+/* 
+========================================
+ ---------------------- grids  
+========================================
+*/
+.grid {
+    display: grid;
+    &-3c{
+        gap:1.75rem;
+        // grid-template-columns: repeat(3, 1fr);
+    }
+    &-2c{
+        gap:1.5rem;
+        // grid-template-columns: repeat(2, 1fr);
+    }
+    &-1c{
+        gap:1rem;
+    }
+}
+
+
+
+
+
+/* 
+========================================
+ ---------------------- Cards  
+========================================
+*/
+
+.card{
+    p {
+        margin:0;
+    }
+    display:flex;
+    align-items: center;
+    padding: 1rem;
+    border-radius:$borderRadius;
+
+
+    /* ---------------------- Cardlist */
+    &-shadow{
+        @include boxshadow();
+    }
+    &-marginleft{
+        margin-left:1.25rem
+    }
+    .card_list{
+        order:2;
+        display:flex;
+        align-items: center;
+        width:100%;
+        .fas{
+            font-size:1.5rem;
+            opacity: 0.5;
+            margin: .75rem 2rem
+        }
+        .fa-primaryC{
+            color:$primaryC;
+            opacity: 1;
+        }
+    }
+    .card_number{
+        order:1;
+        position: absolute;
+        left:20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius:10rem;
+        color:#fff;
+        background:$primaryC;
+        height:30px;
+        width:30px;
+    }
+
+    /* ---------------------- CardPrice */
+}
+
+/* ---------------------- restolist */
+.restolist{
+    img{
+        flex:0 0 100%;
+        width:100%;
+        height:200px;
+        object-fit: cover;
+        object-position: center;
+        border-radius:$borderRadius $borderRadius 0 0;
+        margin-bottom:-4px
+    }
+    .restolist_info{
+        justify-content: space-between;
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+    }
+}
+
+
+
+
+
+/* 
+========================================
+ ---------------------- Footer  
+========================================
+*/
