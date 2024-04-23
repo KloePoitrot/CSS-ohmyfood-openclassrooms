@@ -264,6 +264,7 @@ ul{
 
 /* ------------------------------------------- restolist */
 .restolist{
+    
     img{
         flex:0 0 100%;
         width:100%;
@@ -277,6 +278,24 @@ ul{
         justify-content: space-between;
         border-top-right-radius: 0;
         border-top-left-radius: 0;
+    }
+    .btn_new{
+        display: flex;
+        justify-content: end;
+        position: relative;
+        margin-bottom: -50px;
+        margin-right:20px;
+        .btn_new-green{
+            @include boxshadow();
+            background:$tertiaryC;
+            padding:.5rem .75rem;
+            border-radius:3px;
+            p {
+                margin:0;
+                font-weight: 900;
+                opacity:0.5;
+            }
+        }
     }
 }
 

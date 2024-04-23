@@ -236,6 +236,24 @@ ul li {
   border-top-right-radius: 0;
   border-top-left-radius: 0;
 }
+.restolist .btn_new {
+  display: flex;
+  justify-content: end;
+  position: relative;
+  margin-bottom: -50px;
+  margin-right: 20px;
+}
+.restolist .btn_new .btn_new-green {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  background: #99E2D0;
+  padding: 0.5rem 0.75rem;
+  border-radius: 3px;
+}
+.restolist .btn_new .btn_new-green p {
+  margin: 0;
+  font-weight: 900;
+  opacity: 0.5;
+}
 
 /* 
 ========================================
