@@ -8,6 +8,7 @@
 /* ---------------------- colors */
 $whitebg: #fff;
 $greybg: #f6f6f6;
+$blackbg: #353535;
 $primaryC: #9356DC;
 $secondaryC: #FF79DA;
 $tertiaryC: #99E2D0;
@@ -45,6 +46,13 @@ input {
 }
 input:focus-visible {
     outline:none
+}
+ul{
+    padding:0;
+    margin:0;
+    li{
+        list-style: none;
+    }
 }
 
 
@@ -277,3 +285,24 @@ input:focus-visible {
  ---------------------- Footer  
 ========================================
 */
+.nav {
+    background:$blackbg;
+    color:$whitebg;
+    padding:2rem;
+    .nav_logo {
+        width:100px;
+        padding:.5rem 0
+    }
+    a{
+        color: $whitebg;
+    }
+    .nav_links{
+        display: flex;
+        flex-direction: column;
+        padding-top:.5rem;
+        gap:.5rem;
+        i{
+            width:25px;
+        }
+    }
+}
