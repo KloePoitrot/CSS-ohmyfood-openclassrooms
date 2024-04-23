@@ -35,7 +35,7 @@ h1, h2, h3{
     margin:0;
 }
 img{
-    max-width:100%
+    max-width:100%;
 }
 a{
     text-decoration: none;
@@ -87,6 +87,11 @@ ul{
 ---------------------- Content  
 ========================================
 */
+.maxwidth{
+    max-width:1080px;
+    margin:auto;
+}
+
 .localisation{
     position:relative;
     padding:20px;
@@ -98,8 +103,8 @@ ul{
     }
     .localisation_input{
         font-weight: 600;
-        font-size:20px;
-        width: 200px;
+        font-size:16px;
+        width: 150px;
         text-align: center;
     }
 }
@@ -116,7 +121,7 @@ ul{
 .section{
     padding:3rem 1rem;
     .section_content{
-        margin:1.5rem 0
+        margin:1.5rem 0;
     }
     &_center{
         text-align: center;
@@ -218,14 +223,14 @@ ul{
     padding: 1rem;
     border-radius:$borderRadius;
 
-
-    /* ---------------------- Cardlist */
     &-shadow{
         @include boxshadow();
     }
     &-marginleft{
-        margin-left:1.25rem
+        margin-left:1rem
     }
+
+    /* ---------------------- Cardlist */
     .card_list{
         order:2;
         display:flex;
@@ -234,7 +239,7 @@ ul{
         .fas{
             font-size:1.5rem;
             opacity: 0.5;
-            margin: .75rem 2rem
+            margin: .75rem 1.5rem;
         }
         .fa-primaryC{
             color:$primaryC;
@@ -243,16 +248,16 @@ ul{
     }
     .card_number{
         order:1;
-        position: absolute;
-        left:20px;
+        position: relative;
+        margin-left:-2rem;
         display: flex;
         justify-content: center;
         align-items: center;
         border-radius:10rem;
         color:#fff;
         background:$primaryC;
-        height:30px;
-        width:30px;
+        height:35px!important;
+        width:35px!important;
     }
 
     /* ---------------------- CardPrice */
@@ -267,7 +272,7 @@ ul{
         object-fit: cover;
         object-position: center;
         border-radius:$borderRadius $borderRadius 0 0;
-        margin-bottom:-4px
+        margin-bottom:-4px;
     }
     .restolist_info{
         justify-content: space-between;
@@ -291,7 +296,7 @@ ul{
     padding:2rem;
     .nav_logo {
         width:100px;
-        padding:.5rem 0
+        padding:.5rem 0;
     }
     a{
         color: $whitebg;
@@ -303,6 +308,101 @@ ul{
         gap:.5rem;
         i{
             width:25px;
+        }
+    }
+}
+
+
+
+
+
+/* 
+========================================
+ ---------------------- RESPONSIVE TABLET
+========================================
+*/
+@media (min-width: 801px) {
+    /* ---------------------- Grids */
+    .grid {
+        display: grid;
+        &-3c{
+            gap:.5rem;
+            grid-template-columns: repeat(3, 1fr);
+        }
+        &-2c{
+            column-gap:3rem;
+            row-gap:1.5rem;
+            grid-template-columns: repeat(2, 1fr);
+        }
+        &-1c{
+            gap:1rem;
+        }
+    }
+
+    /* ---------------------- footer */
+    .nav {
+        padding-top:4rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        gap:3rem;
+        .nav_logo {
+            order:2
+        }
+        .nav_links{
+            display: flex;
+            flex-direction: row;
+            gap:.5rem;
+            
+        }
+        ul 
+        {
+            order:1;
+            display: flex;
+            flex-direction: row;
+            gap:1.5rem;
+        }
+    }
+}
+
+
+
+
+
+/* 
+========================================
+ ---------------------- RESPONSIVE DESKTOP
+========================================
+*/
+@media (min-width: 1025px) {
+    .section{
+        padding: 2rem 3rem
+    }
+    /* ---------------------- Grids */
+    .grid {
+        display: grid;
+        &-3c{
+            gap:1rem;
+        }
+        &-2c{
+            column-gap:5rem;
+            row-gap:2rem;
+        }
+        &-1c{
+            gap:1rem;
+        }
+    }
+
+    /* ---------------------- footer */
+    .nav {
+        gap:5rem;
+        .nav_links{
+            gap:1rem;
+            
+        }
+        ul 
+        {
+            gap:3rem;
         }
     }
 }
