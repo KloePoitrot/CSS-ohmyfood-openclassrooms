@@ -74,8 +74,15 @@ ul li {
 ========================================
 */
 .maxwidth {
+  position: relative;
   max-width: 1080px;
   margin: auto;
+}
+
+.headerimg img {
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
 }
 
 .localisation {
@@ -106,7 +113,7 @@ ul li {
 }
 
 .section {
-  padding: 3rem 1rem;
+  padding: 2rem 1rem;
   /* ------------------------------------------- Menusection */
   /* ------------------------------------------- Background Color */
 }
@@ -115,6 +122,16 @@ ul li {
 }
 .section_center {
   text-align: center;
+}
+.section_menu {
+  z-index: 20;
+  margin-top: -2.5rem;
+  border-radius: 2.5rem 2.5rem 0 0;
+}
+.section_menu .menubox {
+  max-width: 747px;
+  margin: auto;
+  margin-bottom: 2rem;
 }
 .section_grey {
   background: #f6f6f6;
@@ -182,7 +199,7 @@ ul li {
   padding: 1rem;
   border-radius: 1rem;
   /* ------------------------------------------- Cardlist */
-  /* ------------------------------------------- CardPrice */
+  /* ------------------------------------------- cardmenu */
 }
 .card p {
   margin: 0;
@@ -220,6 +237,31 @@ ul li {
   background: #9356DC;
   height: 35px !important;
   width: 35px !important;
+}
+.card_menu {
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+}
+.card_menu_description {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+}
+.card_menu_check {
+  overflow: hidden;
+  position: relative;
+  background: #99E2D0;
+  color: #fff;
+  font-size: 1.25rem;
+  margin: -1.5rem -5rem;
+  margin-left: 1rem;
+  padding: 1.5rem 1.25rem;
+  transition: 0.2s ease-in;
+}
+.card_menu:hover .card_menu_check {
+  margin-right: -1rem !important;
+  transition: 0.2s ease-out;
 }
 
 /* ------------------------------------------- restolist */
@@ -339,7 +381,7 @@ ul li {
 */
 @media (min-width: 1025px) {
   .section {
-    padding: 2rem 3rem;
+    padding: 3rem 3rem;
   }
   /* ------------------------------------------- Grids */
   .grid {
