@@ -34,6 +34,7 @@ body{
     margin:0;
     font-family: roboto, sans-serif;
     font-weight: 300;
+    background: $whitebg;
 }
 h1, h2, h3{
     margin:0;
@@ -81,6 +82,12 @@ ul{
     img {
         max-width:200px;
     }
+    .headerback{
+        position: absolute;
+        font-size: 1.5rem;
+        top:1.5rem;
+        left:1.5rem
+    }
 }
 
 
@@ -101,6 +108,7 @@ ul{
     height:250px;
     width:100%;
     object-fit: cover;
+    object-position: center;
 }
 
 .localisation{
@@ -444,6 +452,14 @@ ul{
         }
     }
 
+    /* ------------------------------------------- Restopage */
+    .menutitle{
+        justify-content: center!important;
+        gap:1rem;
+    }
+    .headerimg img{
+        height:300px;
+    }
     /* ------------------------------------------- footer */
     .nav {
         padding-top:4rem;
@@ -496,6 +512,11 @@ ul{
         &-1c{
             gap:1rem;
         }
+    }
+
+    /* ------------------------------------------- Restopage */
+    .headerimg img{
+        height:400px;
     }
 
     /* ------------------------------------------- footer */
