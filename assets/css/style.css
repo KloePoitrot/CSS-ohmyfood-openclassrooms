@@ -573,4 +573,66 @@ ul li {
   }
 }
 
+/* ------------------------------------------- Restomenu animation */
+#entrees > * {
+  opacity: 0;
+  animation: slideinright 1s;
+  animation-delay: 0.25s;
+  animation-fill-mode: forwards;
+}
+
+#plats > * {
+  opacity: 0;
+  animation: slideinright 1s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+#desserts > * {
+  opacity: 0;
+  animation: slideinright 1s;
+  animation-delay: 0.75s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slideinright {
+  from {
+    margin-left: -5rem;
+    margin-right: 15rem;
+  }
+  to {
+    opacity: 1;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+.section_menu {
+  opacity: 0;
+  animation: slideintop 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slideintop {
+  from {
+    margin-top: 15rem;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.headerimg {
+  opacity: 0;
+  animation: slideinbottom 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slideinbottom {
+  from {
+    margin-top: -5rem;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
