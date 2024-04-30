@@ -1,0 +1,19 @@
+/* 
+========================================
+ ---------------------- grids  
+========================================
+*/
+.grid {
+    display: grid;
+    &-3c{
+        gap:1.75rem;
+        // grid-template-columns: repeat(3, 1fr);
+    }
+    &-2c{
+        gap:1.5rem;
+        // grid-template-columns: repeat(2, 1fr);
+    }
+    &-1c{
+        gap:1rem;
+    }
+}

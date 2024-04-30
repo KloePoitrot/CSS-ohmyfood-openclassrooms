@@ -1,0 +1,28 @@
+/* 
+========================================
+ ---------------------- Footer  
+========================================
+*/
+.nav {
+    display: flex;
+    flex-direction: column;
+    background:$blackbg;
+    color:$whitebg;
+    padding:1rem;
+    gap: .5rem;
+    .nav_logo {
+        width:100px;
+        padding:.5rem 0;
+    }
+    a{
+        color: $whitebg;
+    }
+    ul{
+        display: flex;
+        flex-direction: column;
+        gap:.5rem;
+        i{
+            width:25px;
+        }
+    }
+}

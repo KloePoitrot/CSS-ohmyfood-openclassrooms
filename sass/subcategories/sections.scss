@@ -1,0 +1,105 @@
+/* 
+========================================
+---------------------- Content  
+========================================
+*/
+.maxwidth{
+    position:relative;
+    max-width:1080px;
+    margin:auto;
+}
+.headerimg img{
+    height:250px;
+    width:100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.localisation{
+    position:relative;
+    padding:20px;
+    font-size:15px;
+    box-shadow: 0 3px 5px 3px rgba(0, 0, 0, 0.3);
+    background:#eaeaea;
+    i{
+        font-size:20px;
+    }
+    .localisation_input{
+        font-weight: 600;
+        font-size:16px;
+        width: 150px;
+        text-align: center;
+    }
+}
+
+.title1, .title0{
+    font-size:25px;
+    font-weight:900;
+}
+.title2{
+    font-size:16px;
+    font-weight:900;
+}
+
+.section{
+    padding:2rem 1rem;
+    .section_content{
+        margin:1.5rem 0;
+    }
+    &_center{
+        text-align: center;
+    }
+
+    /* ------------------------------------------- Menusection */
+    &_menu{
+        z-index:20;
+        margin-top:-2.5rem;
+        border-radius:2.5rem 2.5rem 0 0;
+        .menubox{
+            max-width:747px;
+            margin:auto;
+            margin-bottom:2.5rem;
+            .menubox_title{
+                margin-bottom:.25rem;
+                font-size:16px;
+                text-transform: uppercase;
+                font-weight: 300;
+            }
+            .menubox_divider{
+                background:$tertiaryC;
+                height:3px;
+                border-radius:5px;
+                max-width:40px;
+                margin-bottom:.75rem;
+            }
+            &_center{
+                text-align: center;
+                margin-bottom:0;
+            }
+        }
+        .menutitle{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size:18px;
+        }
+        .titleresto{
+            font-family: Shrikhand, sans-serif;
+            font-weight: 100;
+        }
+    }
+
+    /* ------------------------------------------- Background Color */
+    &_grey{
+        background:$greybg;
+        .card{
+            background:$whitebg;
+        }
+    }
+    &_white{
+        background:$whitebg;
+        .card{
+            background:$greybg;
+        }
+    }
+}

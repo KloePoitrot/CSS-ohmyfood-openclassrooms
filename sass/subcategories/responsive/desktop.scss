@@ -1,0 +1,43 @@
+/* 
+========================================
+ ---------------------- RESPONSIVE DESKTOP
+========================================
+*/
+@media (min-width: 1025px) {
+    .section{
+        padding: 3rem 3rem
+    }
+    /* ------------------------------------------- Grids */
+    .grid {
+        display: grid;
+        &-3c{
+            gap:1rem;
+        }
+        &-2c{
+            column-gap:5rem;
+            row-gap:2rem;
+        }
+        &-1c{
+            gap:1rem;
+        }
+    }
+
+    /* ------------------------------------------- Restopage */
+    .headerimg img{
+        height:400px;
+    }
+
+    /* ------------------------------------------- footer */
+    .nav {
+        gap:5rem;
+        .nav_links{
+            gap:1rem;
+            
+        }
+    }
+}
+
+
+
+
+

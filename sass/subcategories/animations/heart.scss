@@ -1,0 +1,41 @@
+/* ------------------------------------------- Heart */
+.fa-heart{
+    font-size:1.5rem;
+    margin:0 1rem;
+    &:hover, &:hover:before {
+        background: linear-gradient(180deg, $primaryC 0%,$secondaryC 100%,);
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+        animation: heartanim .5s ease-out;
+    }
+    &:hover:before{
+        font: var(--fa-font-solid);
+        content: '\f004';
+    }
+    @keyframes heartanim {
+        from {
+            background: linear-gradient(180deg,transparent 50%,$primaryC 50%,$secondaryC 120%,) 0 0 / 50% 200%;
+            color: transparent;
+            background-clip: text;
+            -webkit-background-clip: text;
+        }
+        
+        50% {
+            
+            background-position: 40% 100%;
+        }
+        
+        90% {
+            
+            background-position: 20% 100%;
+        }
+        to {
+            background: linear-gradient(180deg,transparent 50%,$primaryC 50%,$secondaryC 100%,) 0 0 / 50% 200%;
+            color: transparent;
+            background-clip: text;
+            -webkit-background-clip: text;
+            background-position: 0% 100%;
+        }
+    }
+}

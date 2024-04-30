@@ -1,0 +1,57 @@
+/* ------------------------------------------- Loading */
+.loading{
+    z-index:-2;
+    position: fixed;
+    width:100%;
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(255, 255, 255, 0.9);
+    animation: vanish 3s; 
+    opacity:0; 
+    .loading_anim{
+        font-size:4rem;
+        color: $primaryC;
+        animation: spin 1.5s 2;  
+    }
+    @keyframes spin {
+        from {
+            rotate: 360deg;
+            color: $primaryC;
+        }
+    
+        20% {
+            rotate: 430deg;
+            font-size:8rem;
+            color: $secondaryC;
+        }
+        55%{
+            font-size:8rem;
+        }
+        to {
+            font-size:4rem;
+            color: $primaryC;
+            rotate: 0deg;
+            display: none;
+        }
+    }
+    @keyframes vanish {
+        from {
+            opacity: 0;
+            z-index: 50;
+        }
+        15% {
+            opacity: 1;
+            z-index: 50;
+        }
+        90% {
+            opacity: 1;
+            z-index: 50;
+        }
+        to{
+            opacity: 0;
+            z-index: -50;
+        }
+    }
+}

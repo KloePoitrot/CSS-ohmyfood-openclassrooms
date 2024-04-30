@@ -77,6 +77,35 @@ ul li {
 
 /* 
 ========================================
+ ---------------------- Footer  
+========================================
+*/
+.nav {
+  display: flex;
+  flex-direction: column;
+  background: #353535;
+  color: #fff;
+  padding: 1rem;
+  gap: 0.5rem;
+}
+.nav .nav_logo {
+  width: 100px;
+  padding: 0.5rem 0;
+}
+.nav a {
+  color: #fff;
+}
+.nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.nav ul i {
+  width: 25px;
+}
+
+/* 
+========================================
 ---------------------- Content  
 ========================================
 */
@@ -209,24 +238,6 @@ ul li {
 
 /* 
 ========================================
- ---------------------- grids  
-========================================
-*/
-.grid {
-  display: grid;
-}
-.grid-3c {
-  gap: 1.75rem;
-}
-.grid-2c {
-  gap: 1.5rem;
-}
-.grid-1c {
-  gap: 1rem;
-}
-
-/* 
-========================================
  ---------------------- Cards  
 ========================================
 */
@@ -255,12 +266,14 @@ ul li {
 }
 .card .card_list .fas {
   font-size: 1.5rem;
-  opacity: 0.5;
+  opacity: 0.25;
   margin: 0.75rem 1.5rem;
+  transition: 0.5s;
 }
-.card .card_list .fa-primaryC {
+.card .card_list:hover .fas {
   color: #9356DC;
   opacity: 1;
+  transition: 0.2s;
 }
 .card .card_number {
   order: 1;
@@ -354,130 +367,22 @@ ul li {
 
 /* 
 ========================================
- ---------------------- Footer  
+ ---------------------- grids  
 ========================================
 */
-.nav {
-  background: #353535;
-  color: #fff;
-  padding: 2rem;
+.grid {
+  display: grid;
 }
-.nav .nav_logo {
-  width: 100px;
-  padding: 0.5rem 0;
+.grid-3c {
+  gap: 1.75rem;
 }
-.nav a {
-  color: #fff;
+.grid-2c {
+  gap: 1.5rem;
 }
-.nav .nav_links {
-  display: flex;
-  flex-direction: column;
-  padding-top: 0.5rem;
-  gap: 0.5rem;
-}
-.nav .nav_links i {
-  width: 25px;
+.grid-1c {
+  gap: 1rem;
 }
 
-/* 
-========================================
- ---------------------- RESPONSIVE TABLET
-========================================
-*/
-@media (min-width: 801px) {
-  .title0 {
-    font-size: 2rem;
-  }
-  /* ------------------------------------------- Grids */
-  .grid {
-    display: grid;
-  }
-  .grid-3c {
-    gap: 0.5rem;
-    grid-template-columns: repeat(3, 1fr);
-  }
-  .grid-2c {
-    column-gap: 3rem;
-    row-gap: 1.5rem;
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .grid-1c {
-    gap: 1rem;
-  }
-  /* ------------------------------------------- Restopage */
-  .menutitle {
-    justify-content: center !important;
-    gap: 1rem;
-  }
-  .headerimg img {
-    height: 300px;
-  }
-  /* ------------------------------------------- footer */
-  .nav {
-    padding-top: 4rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
-    gap: 3rem;
-  }
-  .nav .nav_logo {
-    order: 2;
-  }
-  .nav .nav_links {
-    display: flex;
-    flex-direction: row;
-    gap: 0.5rem;
-  }
-  .nav ul {
-    order: 1;
-    display: flex;
-    flex-direction: row;
-    gap: 1.5rem;
-  }
-}
-/* 
-========================================
- ---------------------- RESPONSIVE DESKTOP
-========================================
-*/
-@media (min-width: 1025px) {
-  .section {
-    padding: 3rem 3rem;
-  }
-  /* ------------------------------------------- Grids */
-  .grid {
-    display: grid;
-  }
-  .grid-3c {
-    gap: 1rem;
-  }
-  .grid-2c {
-    column-gap: 5rem;
-    row-gap: 2rem;
-  }
-  .grid-1c {
-    gap: 1rem;
-  }
-  /* ------------------------------------------- Restopage */
-  .headerimg img {
-    height: 400px;
-  }
-  /* ------------------------------------------- footer */
-  .nav {
-    gap: 5rem;
-  }
-  .nav .nav_links {
-    gap: 1rem;
-  }
-  .nav ul {
-    gap: 3rem;
-  }
-}
-/* 
-========================================
- ---------------------- ANIMATIONS
-========================================
-*/
 /* ------------------------------------------- Loading */
 .loading {
   z-index: -2;
@@ -632,6 +537,92 @@ ul li {
   }
   to {
     opacity: 1;
+  }
+}
+/* 
+========================================
+ ---------------------- RESPONSIVE TABLET
+========================================
+*/
+@media (min-width: 801px) {
+  .title0 {
+    font-size: 2rem;
+  }
+  /* ------------------------------------------- Grids */
+  .grid {
+    display: grid;
+  }
+  .grid-3c {
+    gap: 0.5rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .grid-2c {
+    column-gap: 3rem;
+    row-gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .grid-1c {
+    gap: 1rem;
+  }
+  /* ------------------------------------------- Restopage */
+  .menutitle {
+    justify-content: center !important;
+    gap: 1rem;
+  }
+  .headerimg img {
+    height: 300px;
+  }
+  /* ------------------------------------------- footer */
+  .nav {
+    padding-top: 4rem;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    gap: 3rem;
+  }
+  .nav .nav_logo {
+    order: 2;
+  }
+  .nav ul {
+    order: 1;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
+}
+/* 
+========================================
+ ---------------------- RESPONSIVE DESKTOP
+========================================
+*/
+@media (min-width: 1025px) {
+  .section {
+    padding: 3rem 3rem;
+  }
+  /* ------------------------------------------- Grids */
+  .grid {
+    display: grid;
+  }
+  .grid-3c {
+    gap: 1rem;
+  }
+  .grid-2c {
+    column-gap: 5rem;
+    row-gap: 2rem;
+  }
+  .grid-1c {
+    gap: 1rem;
+  }
+  /* ------------------------------------------- Restopage */
+  .headerimg img {
+    height: 400px;
+  }
+  /* ------------------------------------------- footer */
+  .nav {
+    gap: 5rem;
+  }
+  .nav .nav_links {
+    gap: 1rem;
   }
 }
 
