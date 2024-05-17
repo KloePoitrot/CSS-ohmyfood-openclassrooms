@@ -403,11 +403,11 @@ ul li {
 }
 @keyframes spin {
   from {
-    rotate: 360deg;
+    transform: rotate(360deg);
     color: #9356DC;
   }
   20% {
-    rotate: 430deg;
+    transform: rotate(430deg);
     font-size: 8rem;
     color: #FF79DA;
   }
@@ -417,7 +417,7 @@ ul li {
   to {
     font-size: 4rem;
     color: #9356DC;
-    rotate: 0deg;
+    transform: rotate(0deg);
     display: none;
   }
 }
